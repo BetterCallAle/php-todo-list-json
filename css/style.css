@@ -1,10 +1,16 @@
 .wrapper{
+    background-color: rgb(50, 50, 50);
     height: 100vh;
     width: 100%;
+    overflow-y: auto;
 }
 
-#section-list{
-    
+h1{
+    color: gray;
+}
+
+p{
+    color: white;
 }
 
 ul{

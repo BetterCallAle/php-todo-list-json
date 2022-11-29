@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
+    <title>ToDoList</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <!-- Axios -->
@@ -21,6 +21,12 @@
     <div id="app">
         <div class="wrapper">
             <main>
+                <section id="heading" class="py-5">
+                    <div class="container text-center">
+                        <h1>ToDoList</h1>
+                        <p>Aggiungi e segna le task che hai fatto!</p>
+                    </div>
+                </section>
                 <section id="section-list" class="py-5">
                     <div class="container">
                         <ul class="list-group">

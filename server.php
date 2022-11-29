@@ -33,13 +33,15 @@ if(isset($_POST["toggleIndex"])){
     file_put_contents('todo.json', json_encode($todo));
 }
 
+//If $_POST["deleteIndex"] exist
 if(isset($_POST["deleteIndex"])){
+    // take the index
     $delete_index = $_POST["deleteIndex"];
 
-    $temp_array = $todo;
-
+    // delete the element in the array
     array_splice($todo, $delete_index, 1);
 
+    // write it in the json file
     file_put_contents('todo.json', json_encode($todo));
 }
 

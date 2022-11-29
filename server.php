@@ -8,13 +8,11 @@ $todo = json_decode($json_in_string, true);
 //if something $_POST exist
 if(isset($_POST["userToDo"])){
     
-    // Create an array with done = false
+    // Create an array with text = $_POST["userToDo"] and done = false
     $user_to_do = [
+        "text" => $_POST["userToDo"],
         "done" => false
     ];
-
-    // Add the $_POST to the array
-    $user_to_do["text"] = $_POST["userToDo"];
 
     //Copy the array in the main one
     $todo[] = $user_to_do;

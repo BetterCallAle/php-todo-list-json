@@ -3,7 +3,12 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
-            ciao: "ciao"
+            toDoList:[]
         }
+    },
+    created() {
+        axios.get("server.php").then(resp=>{
+            this.toDoList = resp.data;
+        })
     }
 }).mount("#app");

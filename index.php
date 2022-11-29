@@ -15,8 +15,17 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <div id="app">
-        
+        <main>
+            <section id="section-list" class="py-5">
+                <div class="container">
+                    <ul class="list-group">
+                        <li v-for="toDo in toDoList" class="list-group-item">{{ toDo.text }}</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
     </div>
 
     <!-- Link JS -->

@@ -19,25 +19,27 @@
 <body>
 
     <div id="app">
-        <main>
-            <section id="section-list" class="py-5">
-                <div class="container">
-                    <ul class="list-group">
-                        <li v-for="(toDo, index) in toDoList" class="list-group-item" :class="{'done' : toDo.done}" @click="checkAsDone(index)">
-                            <span>{{ toDo.text }}</span>
-                            <i class="fa-solid fa-trash" @click.stop="deleteElement(index)"></i>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section>
-                <div class="container">
-                    <input type="text" v-model="userToDo" placeholder="inserisci una nuova task" class="form-control w-50 d-inline-block me-4" @keyup.enter="sendTaskToServer">
-                    <button @click="sendTaskToServer" class="btn btn-primary">Aggiungi</button>
-                </div>
-            </section>
-        </main>
+        <div class="wrapper">
+            <main>
+                <section id="section-list" class="py-5">
+                    <div class="container">
+                        <ul class="list-group">
+                            <li v-for="(toDo, index) in toDoList" class="list-group-item d-flex justify-content-between" :class="{'done' : toDo.done}" @click="checkAsDone(index)">
+                                <span>{{ toDo.text }}</span>
+                                <i class="fa-solid fa-trash" @click.stop="deleteElement(index)"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+    
+                <section>
+                    <div class="container text-center">
+                        <input type="text" v-model="userToDo" placeholder="inserisci una nuova task" class="form-control w-50 d-inline-block me-4" @keyup.enter="sendTaskToServer">
+                        <button @click="sendTaskToServer" class="btn btn-primary">Aggiungi</button>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
 
     <!-- Link JS -->

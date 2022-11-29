@@ -3,7 +3,7 @@
 $json_in_string = file_get_contents("todo.json");
 
 //transform the json from a string to a PHP array
-$todo = json_decode($json_in_string);
+$todo = json_decode($json_in_string, true);
 
 //if something $_POST exist
 if(isset($_POST["userToDo"])){
@@ -18,6 +18,8 @@ if(isset($_POST["userToDo"])){
 
     //Copy the array in the main one
     $todo[] = $user_to_do;
+
+    file_put_contents('todo.json', json_encode($todo));
 }
 
 //make the array a json and share it

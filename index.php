@@ -21,7 +21,7 @@
             <section id="section-list" class="py-5">
                 <div class="container">
                     <ul class="list-group">
-                        <li v-for="toDo in toDoList" class="list-group-item" :class="{'done' : toDo.done}">{{ toDo.text }}</li>
+                        <li v-for="(toDo, index) in toDoList" class="list-group-item" :class="{'done' : toDo.done}" @click="checkAsDone(index)">{{ toDo.text }}</li>
                     </ul>
                 </div>
             </section>

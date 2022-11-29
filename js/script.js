@@ -25,6 +25,18 @@ createApp({
             })
 
             this.userToDo = ""
+        },
+
+        checkAsDone(index){
+            const data = {
+                toggleIndex : index
+            }
+
+            axios.post("server.php", data, {
+                headers: {'Content-Type': 'multipart/form-data'}
+            }).then(resp=>{
+                this.toDoList = resp.data;
+            })
         }
     }
 }).mount("#app");

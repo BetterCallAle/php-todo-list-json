@@ -34,7 +34,19 @@ createApp({
 
             axios.post("server.php", data, {
                 headers: {'Content-Type': 'multipart/form-data'}
-            }).then(resp=>{
+            }).then(resp =>{
+                this.toDoList = resp.data;
+            })
+        },
+
+        deleteElement(index){
+            const data = {
+                deleteIndex : index
+            }
+
+            axios.post("server.php", data, {
+                headers: {'Content-type' : 'multipart/form-data'}
+            }).then(resp => {
                 this.toDoList = resp.data;
             })
         }

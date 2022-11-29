@@ -25,6 +25,13 @@
                     </ul>
                 </div>
             </section>
+
+            <section>
+                <div class="container">
+                    <input type="text" v-model="userToDo" placeholder="inserisci una nuova task" class="form-control w-50 d-inline-block me-4">
+                    <button @click="sendTaskToServer" class="btn btn-primary">Aggiungi</button>
+                </div>
+            </section>
         </main>
     </div>
 

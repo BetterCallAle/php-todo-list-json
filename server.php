@@ -19,10 +19,9 @@ if(isset($_POST["userToDo"])){
 
     //write it in the json file
     file_put_contents('todo.json', json_encode($todo));
-}
 
-//if $_POST["taskToggle"] exist
-if(isset($_POST["toggleIndex"])){
+    //if $_POST["taskToggle"] exist
+} elseif(isset($_POST["toggleIndex"])){
     //create an index variable
     $index = $_POST["toggleIndex"];
 
@@ -31,10 +30,10 @@ if(isset($_POST["toggleIndex"])){
 
     //write it in the json file
     file_put_contents('todo.json', json_encode($todo));
-}
+    
+    //If $_POST["deleteIndex"] exist
+} elseif(isset($_POST["deleteIndex"])){
 
-//If $_POST["deleteIndex"] exist
-if(isset($_POST["deleteIndex"])){
     // take the index
     $delete_index = $_POST["deleteIndex"];
 
